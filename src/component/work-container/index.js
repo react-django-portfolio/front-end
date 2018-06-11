@@ -31,10 +31,10 @@ class WorkContainer extends React.Component {
     let dateFormatted2 = new Date(date2)
 
     if (dateFormatted1.getFullYear() == dateFormatted2.getFullYear()){
-      return monthNames[dateFormatted1.getMonth()] + '-' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
+      return monthNames[dateFormatted1.getMonth()] + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
     }
 
-    return monthNames[dateFormatted1.getMonth()] + ' ' + dateFormatted1.getFullYear() + '-' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
+    return monthNames[dateFormatted1.getMonth()] + ' ' + dateFormatted1.getFullYear() + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
   }
 
   getWorkData() {

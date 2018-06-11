@@ -17,7 +17,7 @@ class EducationContainer extends React.Component {
     }
 
     this.getEducationData = this.getEducationData.bind(this)
-    this.getDate = this.getDate.bind(this)
+    this.formatDate = this.formatDate.bind(this)
   }
 
   componentDidUpdate() {
@@ -28,9 +28,15 @@ class EducationContainer extends React.Component {
     this.getEducationData()
   }
 
-  getDate(date) {
-    let dateFormatted = new Date(date)
-    return monthNames[dateFormatted.getMonth()] + ' ' + dateFormatted.getFullYear()
+  formatDate(date1, date2) {
+    let dateFormatted1 = new Date(date1)
+    let dateFormatted2 = new Date(date2)
+
+    if (dateFormatted1.getFullYear() == dateFormatted2.getFullYear()){
+      return monthNames[dateFormatted1.getMonth()] + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
+    }
+
+    return monthNames[dateFormatted1.getMonth()] + ' ' + dateFormatted1.getFullYear() + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
   }
 
   getEducationData() {
@@ -62,7 +68,7 @@ class EducationContainer extends React.Component {
               <h5> {item.minor} </h5>
               <h5> {item.certificate} </h5>
 
-              <h5> {this.getDate(item.start_date)} - {this.getDate(item.end_date)} </h5>
+              <h5> {this.formatDate(item.start_date, item.end_date)} </h5>
             </div>
           )}
         </div>

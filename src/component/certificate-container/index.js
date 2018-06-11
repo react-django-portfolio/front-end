@@ -17,6 +17,7 @@ class CertificateContainer extends React.Component {
     }
 
     this.getCertificateData = this.getCertificateData.bind(this)
+    this.formatDate = this.formatDate.bind(this)
   }
 
   componentDidUpdate() {
@@ -25,6 +26,21 @@ class CertificateContainer extends React.Component {
 
   componentDidMount() {
     this.getCertificateData()
+  }
+
+  formatDate(date1, date2) {
+    let dateFormatted1 = new Date(date1)
+    let dateFormatted2 = new Date(date2)
+
+    if (dateFormatted1.getFullYear() == '2018'){
+      return monthNames[dateFormatted1.getMonth()] + ' ' + dateFormatted1.getFullYear() + ' - Current'
+    }
+
+    if (dateFormatted1.getFullYear() == dateFormatted2.getFullYear()){
+      return monthNames[dateFormatted1.getMonth()] + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
+    }
+
+    return monthNames[dateFormatted1.getMonth()] + ' ' + dateFormatted1.getFullYear() + ' - ' + monthNames[dateFormatted2.getMonth()] + ' ' + dateFormatted2.getFullYear()
   }
 
   getCertificateData() {
@@ -54,7 +70,7 @@ class CertificateContainer extends React.Component {
             <div key={i} className="inner-section">
               <h4 className="section-header"> {item.institution} </h4>
               <h5> {item.certificate} </h5>
-              <h5> {item.start_date} to  {item.end_date} </h5>
+              <h5> {this.formatDate(item.start_date, item.end_date)} </h5>
             </div>
           )}
         </div>

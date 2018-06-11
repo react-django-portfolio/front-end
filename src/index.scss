@@ -12,22 +12,9 @@ body, html {
   margin-bottom: 16px;
 }
 
-#home {
-  height: 100vh;
-  margin-bottom: 20px;
-}
-
-#background {
-  margin-bottom: 70px;
-}
-
 .night {
   background-color: #2B2D42;
   color: #EEF4ED;
-}
-
-.day {
-  color: #2B2D42;
 }
 
 #light-toggle {
@@ -35,8 +22,29 @@ body, html {
   float: right;
 }
 
+.day {
+  color: #2B2D42;
+}
+
+#home {
+  // height: 100vh;
+  margin-bottom: 20px;
+}
+
+#background {
+  margin-bottom: 70px;
+}
+
+.jumbotron {
+  height: 300px;
+}
+
 .page-section {
-  margin-bottom: 90px;
+  margin-bottom: 70px;
+}
+
+.skills-container {
+  margin-bottom: 50px;
 }
 
 .hideme {

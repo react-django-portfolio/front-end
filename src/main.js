@@ -14,6 +14,7 @@ import EducationContainer from './component/education-container'
 import WorkContainer from './component/work-container'
 import SkillContainer from './component/skill-container'
 import CertificateContainer from './component/certificate-container'
+import FooterContainer from './component/footer-container'
 
 import './index.scss'
 
@@ -59,24 +60,33 @@ class App extends React.Component {
       <MuiThemeProvider>
         <div className={(this.state.day ? 'day' : 'night')}>
           <main className="container">
-            <div id="light-toggle">
-              <Icon className="toggle-icons">brightness_2</Icon>
-              <Switch
-                className="switch"
-                checked={this.state.day}
-                onChange={this.handleChange}
-                value="day"
-                color="secondary"
-              />
-              <Icon className="toggle-icons">wb_sunny</Icon>
+            <div className="row">
+              <div id="light-toggle">
+                <Icon className="toggle-icons">brightness_2</Icon>
+                <Switch
+                  className="switch"
+                  checked={this.state.day}
+                  onChange={this.handleChange}
+                  value="day"
+                  color="secondary"
+                />
+                <Icon className="toggle-icons">wb_sunny</Icon>
+              </div>
             </div>
-            <div id="home" className="container">
-              <HomeContainer />
+
+            <div className="intro">
+              <div className="jumbotron"></div>
+
+              <div id="home" className="container">
+                <HomeContainer />
+              </div>
+
             </div>
+
             <div id="background" className="container page-section">
               <BackgroundContainer />
             </div>
-            <div className="container page-section hideme">
+            <div className="container skills-container hideme">
               <SkillContainer />
             </div>
             <div className="container page-section hideme">
@@ -87,6 +97,9 @@ class App extends React.Component {
             </div>
             <div className="container page-section hideme">
               <CertificateContainer />
+            </div>
+            <div className="container">
+              <FooterContainer />
             </div>
           </main>
         </div>
