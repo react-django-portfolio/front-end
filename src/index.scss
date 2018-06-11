@@ -1,0 +1,65 @@
+
+body, html {
+  font-family: 'Source Sans Pro', 'Roboto';
+  line-height: 1.5;
+}
+
+.toggle-icons {
+  margin-top: 25px;
+}
+
+.switch {
+  margin-bottom: 16px;
+}
+
+#home {
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+#background {
+  margin-bottom: 70px;
+}
+
+.night {
+  background-color: #2B2D42;
+  color: #EEF4ED;
+}
+
+.day {
+  color: #2B2D42;
+}
+
+#light-toggle {
+  margin-top: 20px;
+  float: right;
+}
+
+.page-section {
+  margin-bottom: 90px;
+}
+
+.hideme {
+  opacity: 0;
+}
+
+.title {
+  color: #C10323;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.section-header {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+  .title {
+    text-align: left;
+  }
+
+  .inner-section {
+    margin-left: 20px;
+  }
+}
