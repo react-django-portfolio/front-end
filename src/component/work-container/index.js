@@ -63,10 +63,10 @@ class WorkContainer extends React.Component {
           {workArr.map((item, i) =>
             <div key={i} className="inner-section">
               <div className="row">
-                <div className="col-lg-8 col-md-8 col-sm-6">
+                <div className="col-lg-8 col-md-8 col-sm-8 col-xs-6">
                   <h4 className="section-header"> {item.company} </h4>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-6 text-right work-date">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-6 text-right work-date">
                   <h6> {this.formatDate(item.start_date, item.end_date)} </h6>
                 </div>
               </div>

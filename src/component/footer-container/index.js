@@ -24,7 +24,7 @@ class FooterContainer extends React.Component {
     return (
       <footer className="row" id="lab_social_icon_footer">
         <div className="col-lg-4 col-md-4 col-sm-12 text-center">
-          <h5> Developed by Munir Ibrahim | 2018 </h5>
+          <h5> Developed by Munir Ibrahim | &#169; 2018 </h5>
         </div>
         <div id="icons-section" className="col-lg-8 col-md-8 col-sm-12 text-center">
 

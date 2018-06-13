@@ -4,6 +4,23 @@ body, html {
   line-height: 1.5;
 }
 
+#home-page {
+  // height: 100vh;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.intro {
+  // margin-top: 5%;
+  margin-bottom: 10%;
+}
+
 .toggle-icons {
   margin-top: 25px;
 }
@@ -27,7 +44,6 @@ body, html {
 }
 
 #home {
-  // height: 100vh;
   margin-bottom: 20px;
 }
 
@@ -37,6 +53,21 @@ body, html {
 
 .jumbotron {
   height: 300px;
+  margin-bottom: 0;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/06/20/104540684-GettyImages-530874379.1910x1000.jpg");
+
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-section {
@@ -62,7 +93,20 @@ body, html {
   font-weight: 700;
 }
 
+@media screen and (max-width: 485px) {
+  #home-page {
+    height: 100vh;
+    margin-bottom: 40px;
+  }
+
+}
+
 @media screen and (max-width: 991px) {
+  #home-page {
+    height: 100vh;
+    // margin-top: 40px;
+  }
+
   .title {
     text-align: left;
   }
@@ -71,3 +115,8 @@ body, html {
     margin-left: 20px;
   }
 }
+
+
+// @media screen and (max-width: 991px) {
+//
+// }

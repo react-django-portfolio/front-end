@@ -36,14 +36,14 @@ class SkillContainer extends React.Component {
     let skillArr = this.state.skillArr || []
 
     return (
-      <div>
-        <div className="col-lg-3 col-md-3">
+      <div className="">
+        <div className="col-lg-3 col-md-3 col-sm-12">
           <h4 className="title">SKILLS</h4>
         </div>
-        <div className="col-lg-9 col-md-9 inner-section">
+        <div className="col-lg-9 col-md-9 col-sm-12 inner-section">
           <div className="row">
             {skillArr.map((item, i) =>
-              <div key={i} id="skill-section" className="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+              <div key={i} id="skill-section" className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <h4 className="section-header"> {item.skill.toUpperCase()} </h4>
 
                 {item.skilltype.map((type, j) =>

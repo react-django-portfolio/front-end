@@ -60,25 +60,29 @@ class App extends React.Component {
       <MuiThemeProvider>
         <div className={(this.state.day ? 'day' : 'night')}>
           <main className="container">
-            <div className="row">
-              <div id="light-toggle">
-                <Icon className="toggle-icons">brightness_2</Icon>
-                <Switch
-                  className="switch"
-                  checked={this.state.day}
-                  onChange={this.handleChange}
-                  value="day"
-                  color="secondary"
-                />
-                <Icon className="toggle-icons">wb_sunny</Icon>
+            <div className="" id="home-page">
+
+              <div className="row">
+                <div id="light-toggle">
+                  <Icon className="toggle-icons">brightness_2</Icon>
+                  <Switch
+                    className="switch"
+                    checked={this.state.day}
+                    onChange={this.handleChange}
+                    value="day"
+                    color="secondary"
+                  />
+                  <Icon className="toggle-icons">wb_sunny</Icon>
+                </div>
               </div>
-            </div>
 
-            <div className="intro">
-              <div className="jumbotron"></div>
-
-              <div id="home" className="container">
-                <HomeContainer />
+              <div className="vertical-center">
+                // <div className="row intro body-content">
+                  <div className="jumbotron parallax"></div>
+                  <div id="home" className="container">
+                    <HomeContainer />
+                  </div>
+                </div>
               </div>
 
             </div>
