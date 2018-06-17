@@ -40,7 +40,7 @@ class EducationContainer extends React.Component {
   }
 
   getEducationData() {
-    superagent.get('http://localhost:8000/api/education')
+    superagent.get('https://djangoportfolioapi.herokuapp.com/api/education')
     .then(res => {
       this.setState({
         educationArr: res.body

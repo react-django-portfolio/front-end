@@ -38,7 +38,7 @@ class WorkContainer extends React.Component {
   }
 
   getWorkData() {
-    superagent.get('http://localhost:8000/api/work')
+    superagent.get('https://djangoportfolioapi.herokuapp.com/api/work')
     .then(res => {
       console.log(res.body)
       this.setState({

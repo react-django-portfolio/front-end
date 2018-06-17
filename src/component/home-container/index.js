@@ -39,7 +39,7 @@ class HomeContainer extends React.Component {
       <div className="row">
         <div id="home-container" className="page text-center">
           <h1 id="home-name" className="text-center"> Munir Ibrahim </h1>
-          <h1 id="home-title" className="text-center"> {this.state.title.toUpperCase()} </h1>
+          <h1 id="home-title" className="text-center"> {'software engineer'.toUpperCase()} </h1>
         </div>
       </div>
     )

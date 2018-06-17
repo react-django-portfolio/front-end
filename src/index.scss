@@ -4,16 +4,20 @@ body, html {
   line-height: 1.5;
 }
 
+#entire-app {
+  display: none;
+}
+
 #home-page {
   // height: 100vh;
 }
 
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  // min-height: 100vh; /* These two lines are counted as one :-)       */
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 }
 
 .intro {
@@ -54,12 +58,20 @@ body, html {
 .jumbotron {
   height: 300px;
   margin-bottom: 0;
+  border-radius: 0;
+}
+
+.home-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .parallax {
   /* The image used */
   background-image: url("https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/06/20/104540684-GettyImages-530874379.1910x1000.jpg");
-
+  // background-image: url("http://i.imgur.com/ltNqAZ9.jpg");
   /* Set a specific height */
   min-height: 300px;
 
@@ -115,8 +127,3 @@ body, html {
     margin-left: 20px;
   }
 }
-
-
-// @media screen and (max-width: 991px) {
-//
-// }

@@ -44,7 +44,7 @@ class CertificateContainer extends React.Component {
   }
 
   getCertificateData() {
-    superagent.get('http://localhost:8000/api/certificate')
+    superagent.get('https://djangoportfolioapi.herokuapp.com/api/certificate')
     .then(res => {
       console.log('TEST')
       this.setState({
