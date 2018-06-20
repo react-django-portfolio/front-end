@@ -12,26 +12,9 @@ class HomeContainer extends React.Component {
       title: '',
       description: ''
     }
-
-    this.getData = this.getData.bind(this)
   }
 
   componentDidMount(){
-    this.getData()
-  }
-
-  getData() {
-    superagent.get('http://localhost:8000/api/about')
-    .then(res => {
-      console.log(res.body[0]);
-      this.setState({
-        title: res.body[0].title,
-        description: res.body[0].description
-      })
-    })
-    .catch(err => {
-      console.log(err);
-    })
   }
 
   render() {

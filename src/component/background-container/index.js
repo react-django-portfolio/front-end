@@ -13,25 +13,25 @@ class BackgroundContainer extends React.Component {
       description: ''
     }
 
-    this.getData = this.getData.bind(this)
+    // this.getData = this.getData.bind(this)
   }
 
   componentDidMount(){
-    this.getData()
+    // this.getData()
   }
 
-  getData() {
-    superagent.get('http://localhost:8000/api/about')
-    .then(res => {
-      this.setState({
-        title: res.body[0].title,
-        description: res.body[0].description
-      })
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
+  // getData() {
+  //   superagent.get('http://localhost:8000/api/about')
+  //   .then(res => {
+  //     this.setState({
+  //       title: res.body[0].title,
+  //       description: res.body[0].description
+  //     })
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   })
+  // }
 
   render() {
     return (

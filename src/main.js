@@ -6,11 +6,16 @@ import ReactDom from 'react-dom'
 import {BrowserRouter, Route} from 'react-router-dom'
 
 // MaterialUI Imports
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Switch from '@material-ui/core/Switch'
 import Icon from '@material-ui/core/Icon'
 import LinearProgress from '@material-ui/core/LinearProgress'
-// import CircularProgress from '@material-ui/core/CircularProgress'
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark', // Switching the dark mode on is a single property value change.
+  },
+});
 
 // Component Imports
 import HomeContainer from './component/home-container'
@@ -30,12 +35,15 @@ $(document).ready(function() {
   $(window).scroll( function(){
     /* Check the location of each desired element */
     $('.hideme').each( function(i){
+      // console.log('$(this).position().top :: ', $(this).position().top);
+      // console.log('$(this).outerHeight() :: ', $(this).outerHeight());
       var bottom_of_object = $(this).position().top + $(this).outerHeight()
-      var bottom_of_window = $(window).scrollTop() + $(window).height() * 1.3
+      var bottom_of_window = $(window).scrollTop() + $(window).height() * 1
 
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
-        $(this).animate({'opacity':'1'},1500)
+      if( bottom_of_window > (bottom_of_object - 100) ){
+        // $(this).fadeIn(1000)
+        $(this).animate({'opacity':'1'}, 1000)
       }
     });
   });
@@ -47,7 +55,6 @@ $(document).ready(function() {
       $('#entire-app').fadeIn(1000)
     })
   }
-
 });
 
 
@@ -75,7 +82,7 @@ class App extends React.Component {
     const { classes } = this.props;
 
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
         <div className={(this.state.day ? "day" : "night")}>
           <LinearProgress id="loader" color="secondary" />
           <main className="container" id="entire-app">

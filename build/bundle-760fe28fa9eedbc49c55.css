@@ -1,0 +1,170 @@
+#home-name {
+  font-size: 5em;
+  font-family: 'Lobster'; }
+
+#home-title {
+  font-size: 2em; }
+.background-info {
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 10px; }
+.expand_more {
+  padding-top: 1.5%;
+  margin-left: 2%;
+  color: #EF233C; }
+
+.position-title {
+  margin-top: -10px; }
+
+.work-date {
+  font-family: 'Roboto Mono';
+  font-size: .3em; }
+
+.work-section {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: -5px; }
+
+.work-desc {
+  margin-bottom: 5px; }
+.inner-section {
+  margin-bottom: 25px; }
+
+.skill-type {
+  font-size: .9em;
+  font-weight: 300; }
+
+#skill-section {
+  margin-bottom: 20px; }
+.inner-section {
+  margin-bottom: 25px; }
+#lab_social_icon_footer {
+  padding: 30px 30px; }
+
+.night #lab_social_icon_footer a {
+  color: white; }
+
+.day #lab_social_icon_footer a {
+  color: #333; }
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1); }
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s; }
+
+/*
+    Multicoloured Hover Variations
+*/
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF; }
+
+#lab_social_icon_footer #social-em:hover {
+  color: #f39c12; }
+
+#lab_social_icon_footer #social-link:hover {
+  color: #0077B5; }
+
+#lab_social_icon_footer #social-insta:hover {
+  color: #cd486b; }
+
+#lab_social_icon_footer #social-gh:hover {
+  color: #6e5494; }
+body, html {
+  font-family: 'Source Sans Pro', 'Roboto';
+  line-height: 1.5; }
+
+#entire-app {
+  display: none; }
+
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */ }
+
+.intro {
+  margin-bottom: 10%; }
+
+.toggle-icons {
+  margin-top: 25px; }
+
+.switch {
+  margin-bottom: 16px; }
+
+.night {
+  background-color: #2B2D42;
+  color: #EEF4ED; }
+
+#light-toggle {
+  margin-top: 20px;
+  float: right; }
+
+.day {
+  color: #2B2D42; }
+
+#home {
+  margin-bottom: 20px; }
+
+#background {
+  margin-bottom: 70px; }
+
+.jumbotron {
+  height: 300px;
+  margin-bottom: 0;
+  border-radius: 0; }
+
+.home-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.parallax {
+  /* The image used */
+  background-image: url("https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/06/20/104540684-GettyImages-530874379.1910x1000.jpg");
+  /* Set a specific height */
+  min-height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.page-section {
+  margin-bottom: 70px; }
+
+.skills-container {
+  margin-bottom: 50px; }
+
+.hideme {
+  opacity: 0; }
+
+.title {
+  color: #C10323;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 20px; }
+
+.section-header {
+  font-weight: 700; }
+
+@media screen and (max-width: 485px) {
+  #home-page {
+    height: 100vh;
+    margin-bottom: 40px; } }
+
+@media screen and (max-width: 991px) {
+  #home-page {
+    height: 100vh; }
+  .title {
+    text-align: left; }
+  .inner-section {
+    margin-left: 20px; } }
